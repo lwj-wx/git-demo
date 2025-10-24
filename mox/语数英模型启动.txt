@@ -1,0 +1,10 @@
+语文
+conda activate vllm
+CUDA_VISIBLE_DEVICES=0,1 vllm serve /root/models/chinese_subject-918   --host 0.0.0.0   --port 9000   --tensor-parallel-size 2   --gpu-memory-utilization 0.95
+
+英语
+conda activate vllm
+CUDA_VISIBLE_DEVICES=0,1 vllm serve /root/models/english_subject-9.19   --host 0.0.0.0   --port 9000   --tensor-parallel-size 2   --gpu-memory-utilization 0.95
+数学
+conda activate vllm
+CUDA_VISIBLE_DEVICES=0,1 vllm serve /root/models/mathModel_subject-9.22   --host 0.0.0.0   --port 9000   --tensor-parallel-size 2   --gpu-memory-utilization 0.95
