@@ -1,0 +1,24 @@
+--200 evalscope
+
+evalscope eval \
+ --model /data/models/english_subject04 \
+ --datasets gsm8k arc \
+ --limit 5                         
+对训好的模型进行测评
+evalscope app 打开可视化测评工具
+
+
+CUDA_VISIBLE_DEVICES=1,2 vllm serve /data/models/subject   --host 0.0.0.0   --port 9000   --tensor-parallel-size 2   --gpu-memory-utilization 0.95
+
+
+evalscope eval \
+  --eval-config /data/datasets/eval.yaml \
+  --model /data/models/chinese1022 \
+  --datasets aime24 aime25 gpqa_diamond live_code_bench \
+  --dataset-args '{"source": "local", "path": "/data/datasets", "format": "jsonl"}'
+
+
+--200 dify 启动
+cd ~/dify/docker
+docker compose up -d
+http:192.168.2.200:80
