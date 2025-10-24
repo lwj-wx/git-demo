@@ -1,4 +1,21 @@
 diff a/README.md b/README.md	(rejected hunks)
-@@ -0,0 +1 @@
+@@ -1,9 +1,19 @@
+ <<<<<<< HEAD
++<<<<<<< HEAD
+ # git-demo
+ =======
++=======
++
++>>>>>>> 46388297e577d806532c5789924ea59031e78b36
+ "# Git ��ϰ��Ŀ" 
+ "" 
+ "## ��������" 
+ "- �����������" 
+ "- ����������" 
++<<<<<<< HEAD
+ >>>>>>> feature/add-calculator
++=======
++
 +# git-demo
-\ No newline at end of file
++
++>>>>>>> 46388297e577d806532c5789924ea59031e78b36
